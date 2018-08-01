@@ -11,7 +11,14 @@ artist1 = Artist.new(
   }
 )
 
+artist2 = Artist.new(
+  {
+    'name' => "Sum 41"
+  }
+)
+
 artist1.save()
+artist2.save()
 
 album1 = Album.new(
   {
@@ -32,6 +39,16 @@ album2 = Album.new(
 )
 
 album2.save()
+
+album3 = Album.new(
+  {
+    'title' => "All Killer No Filler",
+    'genre' => "Punk Rock",
+    'artist_id' => artist2.id()
+  }
+)
+
+album3.save()
 
 binding.pry
 nil
