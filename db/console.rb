@@ -17,11 +17,21 @@ album1 = Album.new(
   {
     'title' => ".5: The Gray Chapter",
     'genre' => "nu metal",
-    'artist_id' =>artist1.id()
+    'artist_id' => artist1.id()
   }
 )
 
 album1.save()
+
+album2 = Album.new(
+  {
+    'title' => "All Hope Is Gone",
+    'genre' => 'Metal',
+    'artist_id' => artist1.id()
+  }
+)
+
+album2.save()
 
 binding.pry
 nil
